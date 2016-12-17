@@ -22,14 +22,28 @@
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'layout/partial-test.html'
+            views: {
+              'header': {
+                templateUrl: 'layout/header.html'
+              },
+              'content': {
+                templateUrl: 'layout/home.html'
+              }
+            }
         })
         
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-        .state('a1', {
-            url: '/a1',
-            templateUrl: 'layout/partial-test2.html'    
-        });
+        .state('help-and-tips', {
+            url: '/help-and-tips',
+            views: {
+              'header': {
+                templateUrl: 'layout/header.html'
+              },
+              'content': {
+                templateUrl: 'layout/help-and-tips.html'
+              }
+            }
+        })
 
          // use the HTML5 History API
         $locationProvider.html5Mode(true);

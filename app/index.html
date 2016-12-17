@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <base href="/">
 
@@ -16,15 +17,10 @@
 </head>
 
 <body ng-app="charlesProto">
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand">Charles Prototype</a>
-      </div>
-    </div>
-  </nav>
+  
+  <div ui-view="header"></div>
 
-  <div ui-view>Hello, world!</div>
+  <div ui-view="content">Hello, world!</div>
 
     <!--angular and ui-router-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>

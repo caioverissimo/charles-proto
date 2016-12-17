@@ -1,1 +1,154 @@
-/* app.css
+/* module name */
+
+/* styles code goes here*/
+
+
+/* ---------------------------------------------------- */
+
+/* c-navigation */
+
+.c-navigation {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .c-navigation {
+    display: block;
+  }
+}
+
+
+
+/* ---------------------------------------------------- */
+
+
+
+/* c-searchBar */
+
+.c-searchBar {
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  right: 50px;
+  padding: 8px;
+}
+
+  @media screen and (min-width: 1280px) {
+    .c-searchBar {
+      position: initial;
+    }
+  }
+
+.c-searchBar__field {
+  width: calc(100% - 38px);
+  height: 34px;
+}
+
+.c-searchBar__button {
+  width: 34px;
+  height: 34px;
+}
+
+
+/* ---------------------------------------------------- */
+
+
+
+/* u-layout */
+
+.u-layout__row {
+	width: 100%;
+	display: inline-block;
+}
+
+.u-layout__container {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 1280px) {
+	.u-layout__container {
+  	max-width: 1280px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+
+/* ---------------------------------------------------- */
+
+
+
+/* c-header */
+.c-header {
+  position: relative;
+  height: 50px;
+}
+
+@media screen and (min-width: 1280px) {
+  .c-header {
+    height: 50px;
+  }
+}
+
+.c-header__logo {
+	float: left;
+	margin-right: 20px;
+}
+
+.c-header__menuTrigger {
+  width: 50px;
+  height: 50px;
+  float: right;
+  display: block;
+}
+
+@media screen and (min-width: 1280px) {
+  .c-header__menuTrigger {
+    display: none;
+  }
+}
+
+
+
+
+/* ---------------------------------------------------- */
+
+
+
+/* c-searchList */
+
+.c-searchList {
+	width: 100%;
+	display: inline-block;
+	list-style: none;
+}
+
+.c-searchList__item {
+	width: 100%;
+	float: left;
+}
+  @media screen and (min-width: 1280px) {
+    .c-searchList__item {
+      width: 33%;
+      float: left;  
+      margin-right: 0.3333%;
+    }
+  }
+
+.c-searchList__description,
+.c-searchList__picture {
+	width: 49%;
+	float: left;
+	margin-right: 1%;	
+}
+
+.c-searchList__picture img {
+	width: 100%;
+}
+
+
+
+/* ---------------------------------------------------- */
