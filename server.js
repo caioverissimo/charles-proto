@@ -19,8 +19,8 @@ app.use(morgan('dev'));
 app.use(express.static(__dirname + '/app'));
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'));
+  res.sendFile(path.join(__dirname + '/app/index.html'));
 });
 
 app.listen(8080);
-console.log('meet-irl is running on 8080');
+console.log('charles-proto is running on 8080');
