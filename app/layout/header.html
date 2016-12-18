@@ -1,24 +1,23 @@
-<nav class="navbar navbar-default c-header">
+<nav class="navbar navbar-default c-header" ng-controller="HeaderController as header">
 
-  <div class="u-layout__container">
     <div class="c-header__logo">
       <img src="http://placehold.it/50x50">
     </div>
 
-    <div class="navbar-header c-navigation">
+    <div class="navbar-header c-navigation" ng-class="{'is-open': header.menuOpened}">
       <a href="/home" class="navbar-brand">
         Home
       </a>
-      <a href="/help-and-tips" class="navbar-brand">
+      <a href="/help-and-tips" class="navbar-brand c-navigation__item">
         Help & Tips
       </a>
-      <a class="navbar-brand">
+      <a class="navbar-brand c-navigation__item">
         Contact
       </a>
-      <a class="navbar-brand">
+      <a class="navbar-brand c-navigation__item">
         Support
       </a>
-      <button type="button" class="btn">
+      <button type="button" class="navbar-brand  c-navigation__item btn">
         Login
         <i class="glyphicon glyphicon-off"> 
         </i>
@@ -34,9 +33,9 @@
       </button>
     </form>
 
-    <button class="c-header__menuTrigger">
+    <button class="c-header__menuTrigger" ng-click="header.menuOpened = !header.menuOpened">
       <i class="glyphicon glyphicon-align-justify">
       </i>
     </button>
-  </div>
+
 </nav>

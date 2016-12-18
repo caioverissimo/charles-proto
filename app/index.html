@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@
 
 <body ng-app="charlesProto">
   
-  <div ui-view="header"></div>
+  <div ui-view="header" class="u-layout__container"></div>
 
   <div ui-view="content">Hello, world!</div>
 
@@ -28,5 +28,6 @@
 
   <!--our angular app-->
   <script src="app.js"></script>
+  <script src="layout/header-controller.js"></script>
 </body>
 </html>

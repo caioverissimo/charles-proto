@@ -5,15 +5,100 @@
 
 /* ---------------------------------------------------- */
 
-/* c-navigation */
 
-.c-navigation {
+/* resets */
+body {
+  width: 100%;
+  background: #eee;
+  color: #666;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 0 15px;
+}
+
+
+/* ---------------------------------------------------- */
+
+
+/* c-presentation */
+
+.c-presentation {
+  padding: 15px   ;
+  background-color: #f8f8f8;
+}
+
+
+/* ---------------------------------------------------- */
+
+
+/* c-carousel */
+
+.c-carousel img {
+  width: 100%;
+  height: auto;
+}
+
+.c-carousel--mobile {
+  display: block;
+}
+
+@media screen and (min-width: 1280px) {
+  .c-carousel--mobile {
+    display: none;
+  }
+}
+
+.c-carousel--desktop {
   display: none;
 }
 
 @media screen and (min-width: 1280px) {
-  .c-navigation {
+  .c-carousel--desktop {
     display: block;
+  }
+}
+
+
+
+/* ---------------------------------------------------- */
+
+
+/* c-navigation */
+
+.c-navigation {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  background-color: #fff;
+}
+
+.c-navigation.is-open {
+  display: block;
+}
+
+@media screen and (min-width: 1280px) {
+  .c-navigation {
+    width: auto;
+    display: block;
+    position: initial;
+    top: initial;
+    background-color: transparent;
+  }
+}
+
+.c-navigation__item {
+  width: 100%;
+}
+
+@media screen and (min-width: 1280px) {
+  .c-navigation__item {
+    width: auto;
   }
 }
 
@@ -26,7 +111,7 @@
 /* c-searchBar */
 
 .c-searchBar {
-  width: auto;
+  width: calc(100% - 100px);
   position: absolute;
   top: 0;
   left: 50px;
@@ -36,7 +121,13 @@
 
   @media screen and (min-width: 1280px) {
     .c-searchBar {
-      position: initial;
+      width: auto;
+      display: inline-block;
+      float: right;
+      position: relative;
+      left: initial;
+      right: initial;
+
     }
   }
 
@@ -69,12 +160,26 @@
 }
 
 @media screen and (min-width: 1280px) {
-	.u-layout__container {
-  	max-width: 1280px;
+  .u-layout__container {
+    max-width: 1280px;
     padding-right: 15px;
     padding-left: 15px;
   }
 }
+
+.u-layout__session {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 1280px) {
+  .u-layout__container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
 
 
 /* ---------------------------------------------------- */
@@ -83,6 +188,8 @@
 
 /* c-header */
 .c-header {
+  width: 100%;
+  display: block;
   position: relative;
   height: 50px;
 }
@@ -95,18 +202,37 @@
 
 .c-header__logo {
 	float: left;
-	margin-right: 20px;
+	margin-right: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10%;
+  overflow: hidden;
+}
+
+.c-header__logo img {
+  width: 40px;
+}
+
+@media screen and (min-width: 1280px) {
+  .c-header__logo {
+    margin-right: 20px;
+  }
 }
 
 .c-header__menuTrigger {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   float: right;
   display: block;
+  margin-top: 5px;
+  margin-right: 5px;
+
 }
 
 @media screen and (min-width: 1280px) {
   .c-header__menuTrigger {
+    width: 50px;
+    height: 50px;
     display: none;
   }
 }
@@ -124,6 +250,7 @@
 	width: 100%;
 	display: inline-block;
 	list-style: none;
+  padding: 0;
 }
 
 .c-searchList__item {
