@@ -22,5 +22,8 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname + '/app/index.html'));
 });
 
-app.listen(8080);
-console.log('charles-proto is running on 8080');
+var port = process.env.PORT || 3000;
+
+app.listen(port);
+
+console.log('charles-proto is running on 3000');
